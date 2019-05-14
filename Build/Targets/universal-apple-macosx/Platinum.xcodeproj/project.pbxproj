@@ -563,6 +563,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		01094525228ABAE900B232CC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		01094526228ABAEA00B232CC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		E402C7541297CECB00565B76 /* ContentDirectorySCPD.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ContentDirectorySCPD.cpp; sourceTree = "<group>"; };
 		E40616C01ADE5C9A008BDAEB /* Neptune.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Neptune.framework; path = ../../../Carthage/Build/iOS/Neptune.framework; sourceTree = "<group>"; };
 		E40C699E11E6ED710024CAD4 /* PltFrameBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PltFrameBuffer.cpp; sourceTree = "<group>"; };
@@ -677,8 +679,6 @@
 		E43155B80D6FFE4C00899579 /* PltSyncMediaBrowser.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = PltSyncMediaBrowser.cpp; sourceTree = "<group>"; };
 		E43155B90D6FFE4C00899579 /* PltSyncMediaBrowser.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PltSyncMediaBrowser.h; sourceTree = "<group>"; };
 		E43741FC123FFB9800000109 /* MediaServerCocoaTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediaServerCocoaTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E4374243123FFE9100000109 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E4374245123FFE9100000109 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		E4374246123FFE9100000109 /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		E4374247123FFE9100000109 /* MediaServerCocoaTest-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MediaServerCocoaTest-Info.plist"; sourceTree = "<group>"; };
 		E4374248123FFE9100000109 /* MediaServerCocoaTest_AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaServerCocoaTest_AppDelegate.h; sourceTree = "<group>"; };
@@ -1738,15 +1738,14 @@
 			};
 			buildConfigurationList = 1DEB91EF08733DB70010E9CD /* Build configuration list for PBXProject "Platinum" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 1;
 			knownRegions = (
-				English,
-				Japanese,
-				French,
-				German,
 				en,
 				Base,
+				de,
+				fr,
+				ja,
 			);
 			mainGroup = 08FB7794FE84155DC02AAC07 /* Platinum */;
 			projectDirPath = "";
@@ -2209,7 +2208,7 @@
 		E4374242123FFE9100000109 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E4374243123FFE9100000109 /* English */,
+				01094525228ABAE900B232CC /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -2217,7 +2216,7 @@
 		E4374244123FFE9100000109 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E4374245123FFE9100000109 /* English */,
+				01094526228ABAEA00B232CC /* en */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
