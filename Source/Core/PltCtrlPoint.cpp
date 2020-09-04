@@ -327,6 +327,9 @@ PLT_CtrlPoint::Stop(PLT_SsdpListenTask* task)
     // as there are no more tasks pending
     m_RootDevices.Clear();
     m_Subscribers.Clear();
+	
+	m_PendingInspections.Clear();
+	m_PendingNotifications.Clear();
 
     m_EventHttpServer = NULL;
     m_TaskManager = NULL;
