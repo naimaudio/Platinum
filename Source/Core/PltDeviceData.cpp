@@ -182,15 +182,22 @@ PLT_DeviceData::GetIconUrl(const char* mimetype,
         if ((mimetype && m_Icons[i].m_MimeType != mimetype) ||
             (maxsize  && m_Icons[i].m_Width > maxsize)      ||
             (maxsize  && m_Icons[i].m_Height > maxsize)     ||
-            (maxdepth && m_Icons[i].m_Depth > maxdepth))
-            continue;
-
-        // pick the biggest and better resolution we can
-        if (icon.m_Width  >= m_Icons[i].m_Width  ||
-            icon.m_Height >= m_Icons[i].m_Height ||
-            //icon.m_Depth  >= m_Icons[i].m_Depth  ||
+            (maxdepth && m_Icons[i].m_Depth > maxdepth)     ||
             m_Icons[i].m_UrlPath.IsEmpty())
             continue;
+
+        // skip a smaller size icon
+        if (icon.m_Width  > m_Icons[i].m_Width  ||
+            icon.m_Height > m_Icons[i].m_Height) {
+            continue;
+        }
+
+        // skip a lower resolution for the same size
+        if ((icon.m_Width  == m_Icons[i].m_Width  ||
+             icon.m_Height == m_Icons[i].m_Height) &&
+            icon.m_Depth >= m_Icons[i].m_Depth) {
+            continue;
+        }
 
         icon = m_Icons[i];
     }
@@ -347,7 +354,7 @@ PLT_DeviceData::AddService(PLT_Service* service)
 NPT_Result
 PLT_DeviceData::RemoveService(PLT_Service* service)
 {
-	for (NPT_Cardinal i=0;
+    for (NPT_Cardinal i=0;
          i<m_Services.GetItemCount();
          i++) {
         if (m_Services[i] == service) {
@@ -532,7 +539,7 @@ PLT_DeviceData::SetDescription(PLT_DeviceDataReference&      root_device,
     // look for optional URLBase element
     if (NPT_SUCCEEDED(PLT_XmlHelper::GetChildText(root, "URLBase", URLBase))) {
         NPT_HttpUrl url(URLBase);
-		// Some devices like Connect360 try to be funny - not so
+        // Some devices like Connect360 try to be funny - not so
         if (url.GetHost().ToLowercase() == "localhost" ||
             url.GetHost().ToLowercase() == "127.0.0.1") {
             url.SetHost(context.GetRemoteAddress().GetIpAddress().ToString());
@@ -765,7 +772,7 @@ PLT_DeviceData::FindServiceBySCPDURL(const char*   url,
     if (NPT_SUCCEEDED(res)) return res;
 
     if (recursive) {
-		for (int i=0; i<(int)m_EmbeddedDevices.GetItemCount(); i++) {
+        for (int i=0; i<(int)m_EmbeddedDevices.GetItemCount(); i++) {
             res = m_EmbeddedDevices[i]->FindServiceBySCPDURL(
                 url, 
                 service,
@@ -791,7 +798,7 @@ PLT_DeviceData::FindServiceByControlURL(const char*   url,
     if (NPT_SUCCEEDED(res)) return res;
 
     if (recursive) {
-		for (int i=0; i<(int)m_EmbeddedDevices.GetItemCount(); i++) {
+        for (int i=0; i<(int)m_EmbeddedDevices.GetItemCount(); i++) {
             res = m_EmbeddedDevices[i]->FindServiceByControlURL(
                 url, 
                 service,
