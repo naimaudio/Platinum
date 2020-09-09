@@ -46,8 +46,8 @@
 int
 main(int /* argc */, char** /* argv */)
 {
-	// setup Neptune logging
-	NPT_LogManager::GetDefault().Configure("plist:.level=FINE;.handlers=ConsoleHandler;.ConsoleHandler.colors=off;.ConsoleHandler.filter=42");
+    // setup Neptune logging
+    NPT_LogManager::GetDefault().Configure("plist:.level=FINE;.handlers=ConsoleHandler;.ConsoleHandler.colors=off;.ConsoleHandler.filter=42");
 
     PLT_UPnP upnp;
 
@@ -65,7 +65,8 @@ main(int /* argc */, char** /* argv */)
     upnp.Start();
 
     char buf[256];
-    while (gets(buf)) {
+    while (true) {
+        fgets(buf, 256, stdin);
         if (*buf == 'q')
             break;
     }
