@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -77,8 +77,12 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		011CBDD52762538800712220 /* Neptune.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011CBDD42762538800712220 /* Neptune.xcframework */; };
-		011CBDD8276253AB00712220 /* Neptune.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011CBDD42762538800712220 /* Neptune.xcframework */; };
+		5917D0AE2D885063002A2107 /* Neptune.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5917D0AD2D885063002A2107 /* Neptune.framework */; };
+		5917D0B22D88506C002A2107 /* Neptune.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5917D0B12D88506C002A2107 /* Neptune.framework */; };
+		594B735A2D887D1700B45930 /* Neptune.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5917D0AD2D885063002A2107 /* Neptune.framework */; };
+		594B735B2D887D1700B45930 /* Neptune.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5917D0AD2D885063002A2107 /* Neptune.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		594B735D2D887D7800B45930 /* Neptune.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 594B735C2D887D7800B45930 /* Neptune.framework */; };
+		594B735E2D887D7800B45930 /* Neptune.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 594B735C2D887D7800B45930 /* Neptune.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E410161A1ACFA761000E994F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E41016181ACFA761000E994F /* LaunchScreen.xib */; };
 		E410161B1ACFA761000E994F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E41016191ACFA761000E994F /* Main.storyboard */; };
 		E41016261ACFA826000E994F /* Platinum.h in Headers */ = {isa = PBXBuildFile; fileRef = E41016251ACFA826000E994F /* Platinum.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -296,10 +300,6 @@
 		E44E2B861AE761220092347B /* PltDeviceData.h in Headers */ = {isa = PBXBuildFile; fileRef = E43155090D6FFDEB00899579 /* PltDeviceData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E44E2BC41AE76E0F0092347B /* Platinum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E44E2B8B1AE761220092347B /* Platinum.framework */; };
 		E44E2BC51AE76E330092347B /* Platinum.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E44E2B8B1AE761220092347B /* Platinum.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E44E2BCB1AE76FF90092347B /* Neptune.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E44E2B8D1AE7622F0092347B /* Neptune.framework */; };
-		E44E2BCC1AE770150092347B /* Neptune.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40616C01ADE5C9A008BDAEB /* Neptune.framework */; };
-		E44E2BCD1AE7701D0092347B /* Neptune.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E40616C01ADE5C9A008BDAEB /* Neptune.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E44E2BCE1AE7702D0092347B /* Neptune.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E44E2B8D1AE7622F0092347B /* Neptune.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E44E2BCF1AE770500092347B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4374268123FFF5B00000109 /* Cocoa.framework */; };
 		E44E2BDE1AE776DD0092347B /* Neptune.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E44E2B8D1AE7622F0092347B /* Neptune.framework */; };
 		E44E2BDF1AE776E80092347B /* Platinum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E44E2B8B1AE761220092347B /* Platinum.framework */; };
@@ -543,7 +543,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E44E2BCD1AE7701D0092347B /* Neptune.framework in Embed Frameworks */,
+				594B735E2D887D7800B45930 /* Neptune.framework in Embed Frameworks */,
 				E41016391ACFA826000E994F /* Platinum.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -555,7 +555,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E44E2BCE1AE7702D0092347B /* Neptune.framework in CopyFiles */,
+				594B735B2D887D1700B45930 /* Neptune.framework in CopyFiles */,
 				E44E2BC51AE76E330092347B /* Platinum.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -565,7 +565,9 @@
 /* Begin PBXFileReference section */
 		01094525228ABAE900B232CC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		01094526228ABAEA00B232CC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		011CBDD42762538800712220 /* Neptune.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Neptune.xcframework; path = ../../../../../Build/Neptune.xcframework; sourceTree = "<group>"; };
+		5917D0AD2D885063002A2107 /* Neptune.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Neptune.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5917D0B12D88506C002A2107 /* Neptune.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Neptune.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		594B735C2D887D7800B45930 /* Neptune.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Neptune.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E402C7541297CECB00565B76 /* ContentDirectorySCPD.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ContentDirectorySCPD.cpp; sourceTree = "<group>"; };
 		E40616C01ADE5C9A008BDAEB /* Neptune.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Neptune.framework; path = ../../../Carthage/Build/iOS/Neptune.framework; sourceTree = "<group>"; };
 		E40C699E11E6ED710024CAD4 /* PltFrameBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PltFrameBuffer.cpp; sourceTree = "<group>"; };
@@ -736,7 +738,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				011CBDD52762538800712220 /* Neptune.xcframework in Frameworks */,
+				5917D0AE2D885063002A2107 /* Neptune.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -834,8 +836,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				594B735A2D887D1700B45930 /* Neptune.framework in Frameworks */,
 				E44E2BCF1AE770500092347B /* Cocoa.framework in Frameworks */,
-				E44E2BCB1AE76FF90092347B /* Neptune.framework in Frameworks */,
 				E44E2BC41AE76E0F0092347B /* Platinum.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -853,7 +855,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				011CBDD8276253AB00712220 /* Neptune.xcframework in Frameworks */,
+				5917D0B22D88506C002A2107 /* Neptune.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -861,7 +863,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E44E2BCC1AE770150092347B /* Neptune.framework in Frameworks */,
+				594B735D2D887D7800B45930 /* Neptune.framework in Frameworks */,
 				E41016381ACFA826000E994F /* Platinum.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1053,7 +1055,9 @@
 		E4294C5F14319C9400B6FDED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				011CBDD42762538800712220 /* Neptune.xcframework */,
+				594B735C2D887D7800B45930 /* Neptune.framework */,
+				5917D0B12D88506C002A2107 /* Neptune.framework */,
+				5917D0AD2D885063002A2107 /* Neptune.framework */,
 				E44E2B8D1AE7622F0092347B /* Neptune.framework */,
 				E40616C01ADE5C9A008BDAEB /* Neptune.framework */,
 				E48F8A9E1632026F009E46A5 /* Foundation.framework */,
@@ -2342,11 +2346,7 @@
 				INFOPLIST_FILE = Platinum/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "./Carthage/Checkouts/**";
 				MACOSX_DEPLOYMENT_TARGET = "";
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -2403,11 +2403,7 @@
 				INFOPLIST_FILE = Platinum/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "./Carthage/Checkouts/**";
 				MACOSX_DEPLOYMENT_TARGET = "";
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -3235,11 +3231,7 @@
 				);
 				INFOPLIST_FILE = Platinum/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.plutinosoft.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Platinum;
@@ -3296,11 +3288,7 @@
 				);
 				INFOPLIST_FILE = Platinum/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.plutinosoft.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Platinum;
@@ -3368,10 +3356,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "MobileMediaServer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.plutinosoft.$(PRODUCT_NAME:rfc1034identifier)";
@@ -3417,10 +3402,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "MobileMediaServer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.plutinosoft.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

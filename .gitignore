@@ -1,7 +1,6 @@
 /Targets
 */**/Debug
 xcuserdata
-*.xcworkspace
 *.pyc
 .scons*
 .DS_Store
